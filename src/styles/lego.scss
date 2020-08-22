@@ -1,0 +1,15 @@
+@import 'reset';
+
+body {
+  height: 100vh;
+  height: stretch;
+}
+
+#root {
+  padding: 1em;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
