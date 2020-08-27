@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-import Copyleft from "./Copyleft";
+import Copyleft from './Copyleft'
 
 export function Footer({ className }) {
   return (
@@ -12,7 +12,7 @@ export function Footer({ className }) {
         <span>2020</span>
       </div>
     </footer>
-  );
+  )
 }
 
 export default styled(Footer)`
@@ -35,4 +35,4 @@ export default styled(Footer)`
     height: 1em;
     vertical-align: top;
   }
-`;
+`

@@ -1,16 +1,27 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-export function Select({ value, options, onChange, className, disabled = false }) {
+export function Select({
+  value = {},
+  options,
+  onChange,
+  className,
+  disabled = false,
+}) {
   return (
-    <select onChange={onChange} value={value.id} disabled={disabled} className={className}>
+    <select
+      onChange={onChange}
+      value={value.id}
+      disabled={disabled}
+      className={className}
+    >
       {options.map((option, key) => (
         <option key={key} value={option.id}>
           {option.name}
         </option>
       ))}
     </select>
-  );
+  )
 }
 
 export default styled(Select)`
@@ -40,4 +51,4 @@ export default styled(Select)`
     color: #6c757d;
     background-color: #e9ecef;
   }
-`;
+`

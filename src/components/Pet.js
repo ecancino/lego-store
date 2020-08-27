@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 export function Pet({ id, url, width, height, price, onSelect, className }) {
   return (
@@ -9,7 +9,7 @@ export function Pet({ id, url, width, height, price, onSelect, className }) {
         <figcaption>${price}</figcaption>
       </figure>
     </li>
-  );
+  )
 }
 
 export default styled(Pet)`
@@ -32,4 +32,4 @@ export default styled(Pet)`
     border-radius: 0.3em;
     opacity: 0.7;
   }
-`;
+`

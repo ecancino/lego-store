@@ -1,22 +1,20 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-const toLower = s => String(s).toLocaleLowerCase();
+import { toLower } from '../helpers'
 
 export function Breed({
   id,
   name,
   bred_for,
-  breed_group,
   life_span,
   temperament,
-  origin,
   weight,
   height,
-  className
+  className,
 }) {
   return (
-    <section className={className}>
+    <section className={className} id={id}>
       <h2>{name}</h2>
       <small>
         An {toLower(temperament)} dog
@@ -25,9 +23,9 @@ export function Breed({
         of {height.metric} cm.
       </small>
     </section>
-  );
+  )
 }
 
 export default styled(Breed)`
   margin: 2em 0;
-`;
+`

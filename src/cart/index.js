@@ -5,23 +5,20 @@ const initialState = []
 function reducer(state, action) {
   switch (action.type) {
     case 'add':
-      return state.concat(action.payload);
+      return state.concat(action.payload)
     case 'remove':
-      return state.filter(item => item.id !== action.payload);
+      return state.filter((item) => item.id !== action.payload)
     default:
-      return state;
+      return state
   }
 }
 
 export function useCart() {
-  const [items, dispatch] = useReducer(reducer, initialState);
+  const [items, dispatch] = useReducer(reducer, initialState)
 
   return {
     items,
-    addItem: payload =>
-      dispatch({ type: 'add', payload }),
-    removeItem: payload =>
-      dispatch({ type: 'remove', payload })
+    addItem: (payload) => dispatch({ type: 'add', payload }),
+    removeItem: (payload) => dispatch({ type: 'remove', payload }),
   }
 }
-
